@@ -27,8 +27,40 @@ public class E01Stats {
 		//Using scanner to read from a file
 		//Modify and add to the code below
 		//to complete the exercise
+		int doubCount = 0;
 		while(in.hasNextDouble()) {
-			System.out.println(in.nextDouble());
+			in.nextDouble();
+			doubCount++;
 		}
+		System.out.println("There are " + doubCount + " doubles being analyzed.");
+		double fileSortArray[] = new double[doubCount];
+		in = new Scanner(f);
+		int i = 0;
+		while(in.hasNextDouble()) {
+			fileSortArray[i] = in.nextDouble();
+			i++;
+		}
+		double max = 0.0;
+		for (int index = 0; index < fileSortArray.length; index++) {
+			//System.out.println(fileSortArray[index]);
+			if (fileSortArray[index] > max) {
+				max = fileSortArray[index];
+			}
+		}
+		System.out.println("The maximum value is " + max + ".");
+		double min = fileSortArray[0];
+		for (double minCandidate : fileSortArray) {
+			if (minCandidate < min) {
+				min = minCandidate;
+			}
+		}
+		System.out.println("The minimum value is " + min + ".");
+
+		double sum = 0.0;
+		for (double sumAddition : fileSortArray) {
+			sum = sum + sumAddition;
+		}
+		double Average = sum / doubCount;
+		System.out.println("The average value is " + Average + ".");
 	}
 }
