@@ -7,13 +7,15 @@ package module5._3return;
  * main() method.
  */
 public class E02InchesToCentimeters {
-	public static void inchesToCentimeters(double inches) {
-		double centimeters = inches * 2.54;
-		System.out.println(centimeters);
+	public static double inchesToCentimeters(double inches) {
+		return inches * 2.54;
 	}
 
 	public static void main(String[] args) {
-		inchesToCentimeters(10);
-		inchesToCentimeters(12.5);
+		double centimeters;
+		centimeters = inchesToCentimeters(10);
+		System.out.println(centimeters);
+		centimeters = inchesToCentimeters(12.5);
+		System.out.println(centimeters);
 	}
 }
