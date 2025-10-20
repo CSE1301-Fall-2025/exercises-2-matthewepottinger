@@ -1,6 +1,20 @@
 import java.util.Scanner;
 public class tests {
-public static void main(String[] args) {
+
+public static int arrayReader (int[] array) {
+    int findMax = 0;
+    for (int i = 0; i < array.length; i++) {
+        if (array[i] > findMax) {
+            findMax = array[i];
+        }
+    }
+    return findMax;
+}
+    public static void main(String[] args) {
+
+    int[] numbers = {12, 4, 18, 34, 6, 8};
+    int max = arrayReader(numbers);
+    System.out.println(max);
 
     Scanner scan = new Scanner(System.in);
     int number = (int)(Math.random()*((10-1)+1))+1;
@@ -23,8 +37,6 @@ public static void main(String[] args) {
         }
     }
      System.out.println("It took you " + guessCount + " guesses");
-
-
      
 }
 }
