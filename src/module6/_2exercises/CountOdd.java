@@ -21,5 +21,9 @@ public class CountOdd {
         }
     }
 
-    //need to make the main still
+    public static void main(String[] args) {
+        int valueList[] = {4,7, 13, 2, 11, 98};
+        System.out.println(countOddR(valueList));
+
+    }
 }
